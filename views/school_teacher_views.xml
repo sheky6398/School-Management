@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="school_teacher_view_tree">
+        <field name="name">school.teacher.view.tree</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <!-- view content: <form>, <tree>, <graph>, ... -->
+            <tree>
+                <field name="name"/>
+                <field name="subject_name"/>
+                <field name="designation"/>
+                <field name="joining_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="school_teacher_view_form">
+        <field name="name">school.teacher.view.form</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <!-- view content: <form>, <tree>, <graph>, ... -->
+            <form>
+            <header>
+                <button string="Create" type="object" name="action_create" class="btn-primary"/>
+                <button string="Update" type="object" name="action_write" class="btn-primary"/>
+                <button string="Delete" type="object" name="action_delete" class="btn-primary"/>
+    
+                
+            </header>
+                <sheet>
+                <group>
+                    <field name="image"  widget="image" class="oe_avatar" nolabel="1" />
+                </group>
+                    <group>
+                    
+                        <group>
+                            <field name="name"/>
+                            <field name="subject_name"/>
+                            <field name="designation"/>
+                        </group>
+                        <group>
+                            <field name="joining_date"/>
+                            <field name="fee" groups="school_management.group_school_management_teacher"/>
+                            <field name="student_id"/>
+                            <field name="student_batch"/>
+                            <field name="courses_count"/>
+
+                        </group>
+                        
+
+                        
+                    </group>
+                <notebook>
+                    <page string="Courses">
+                        <field name="course_ids"/> 
+                    </page>
+                </notebook>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+                       
+       
+    <record model="ir.actions.act_window" id="action_school_teacher">
+        <field name="name">School Teacher</field>
+        <field name="res_model">school.teacher</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_school_teacher" name="Teachers" sequence="2" 
+            action="action_school_teacher" parent="school_management.menu_school"/> #groups="school_management.group_school_management_teacher"/>
+    
+</odoo>

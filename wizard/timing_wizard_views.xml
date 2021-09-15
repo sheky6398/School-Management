@@ -1,0 +1,31 @@
+<odoo>
+    <data>  
+        <record model="ir.ui.view" id="timing_wizard_form">
+            <field name="name">timing.wizard.view.form</field>
+            <field name="model">timing.wizard</field>
+            <field name= "arch" type="xml">
+
+                <form>
+                    <group>
+                        <group>
+                            <field name="timing"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Update Timing" type="object" name="check_timing" class="btn-primary"/>
+                        <button string="Cancel" special="cancel" class="btn-primary"/>
+
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_timing_wizard">
+            <field name="name">Timing</field>
+            <field name="res_model">timing.wizard</field>
+            <field name= "view_mode">form</field>
+            <field name= "target">new</field>
+
+        </record>
+
+    </data>
+</odoo>

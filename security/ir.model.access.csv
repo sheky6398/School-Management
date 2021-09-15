@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_school_teacher,access.school.teacher,model_school_teacher,school_management.group_school_management_teacher,1,0,1,0
+access_school_teacher_student,access.school.teacher.student,model_school_teacher,school_management.group_school_management_student,1,0,0,0
+access_school_teacher_manager,access.school.teacher.manager,model_school_teacher,school_management.group_school_management_principal,1,1,1,1
+access_school_student,access.school.student,model_school_student,school_management.group_school_management_student,1,0,0,0
+access_school_student_teacher,access.school.student.teacher,model_school_student,school_management.group_school_management_teacher,1,1,1,0
+access_school_student_manager,access.school.student.manager,model_school_student,school_management.group_school_management_principal,1,1,1,1
+access_school_course,access.school.course,model_school_course,school_management.group_school_management_student,1,0,0,0
+access_school_course_teacher,access.school.course.teacher,model_school_course,school_management.group_school_management_teacher,1,1,0,0
+access_school_course_manager,access.school.course.manager,model_school_course,school_management.group_school_management_principal,1,1,1,1
+access_pay_fee_wizard,access.pay.fee.wizard,model_pay_fee_wizard,,1,1,1,1
+access_timing_wizard,access.timing.wizard,model_timing_wizard,,1,1,1,1
+

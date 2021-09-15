@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="school_course_view_tree">
+        <field name="name">school.course.view.tree</field>
+        <field name="model">school.course</field>
+        <field name="arch" type="xml">
+            <!-- view content: <form>, <tree>, <graph>, ... -->
+            <tree>
+                
+                <field name="name"/>
+                <!-- <field name="tutor_ids"/> -->
+                <field name="duration"/>
+                
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="school_course_view_form">
+        <field name="name">school.course.view.form</field>
+        <field name="model">school.course</field>
+        <field name="arch" type="xml">
+            <!-- view content: <form>, <tree>, <graph>, ... -->
+            <form>
+                <header>
+                    <button string="Choose Timing" type="action" name="%(school_management.action_timing_wizard)d" class="btn-primary"/>
+
+                </header>
+                <sheet>
+                <group>
+                    <field name="image"  widget="image" class="oe_avatar" nolabel="1"/>
+                </group>
+                    <group>
+                    
+                        <group>
+                            
+                            <field name="name"/>
+                            <field name="duration"/>
+                            <field name="course_fee"/>
+                            
+                        </group>
+                        <group>
+                            <field name="tutor_id" widget="many2one_tags"/>
+                            <field name="joining_date"/>
+                            <field name="timing"/>
+
+                            
+                        </group>
+                        
+
+                        
+                    </group>
+                    
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+                       
+       
+    <record model="ir.actions.act_window" id="action_school_course">
+        <field name="name">School Courses</field>
+        <field name="res_model">school.course</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_school_course" name="Courses" sequence="3"
+            action="action_school_course" parent="school_management.menu_school"/>
+    
+</odoo>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="course_python" model="school.course">
+        <field name="name">Python</field>
+        <field name="course_fee">10000</field>
+        <field name="duration">6_months</field>
+        <field name="joining_date">2020-12-03</field>
+        </record>
+
+        <record id="course_java" model="school.course">
+        <field name="name">Java</field>
+        <field name="course_fee">12000</field>
+        <field name="duration">3_months</field>
+        <field name="joining_date">2019-11-26</field>
+        </record>
+
+        <record id="course_c++" model="school.course">
+        <field name="name">C++</field>
+        <field name="course_fee">8000</field>
+        <field name="duration">12_months</field>
+        <field name="joining_date">2020-05-11</field>
+        </record>
+
+        <record id="course_odoo14" model="school.course">
+        <field name="name">Odoo14</field>
+        <field name="course_fee">12000</field>
+        <field name="duration">24_months</field>
+        <field name="joining_date">2021-02-11</field>
+        </record>
+
+        <record id="course_django" model="school.course">
+        <field name="name">Django</field>
+        <field name="course_fee">25000</field>
+        <field name="duration">24_months</field>
+        <field name="joining_date">2020-08-11</field>
+        </record>
+    </data>
+</odoo>

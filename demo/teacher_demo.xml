@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="teacher_asif_iqbal" model="school.teacher">
+        <field name="name">Asif Iqbal</field>
+        <field name="subject_name">Python</field>
+        <field name="fee">15000</field>
+        <field name="designation">H.O.D</field>
+        <field name="joining_date">2000-10-05</field>
+        </record>
+
+        <record id="teacher_shraddha_chauhan" model="school.teacher">
+        <field name="name">Shraddha Chauhan</field>
+        <field name="subject_name">Django</field>
+        <field name="fee">12000</field>
+        <field name="designation">Co-ordinator</field>
+        <field name="joining_date">2020-12-25</field>
+        </record>
+
+        <record id="teacher_amit_kumar" model="school.teacher">
+        <field name="name">Amit Kumar</field>
+        <field name="subject_name">Odoo 14</field>
+        <field name="fee">5000</field>
+        <field name="designation">Manager</field>
+        <field name="joining_date">2021-09-23</field>
+        </record>
+
+        <record id="teacher_karan_ojha" model="school.teacher">
+        <field name="name">Karan Ojha</field>
+        <field name="subject_name">Java</field>
+        <field name="fee">15000</field>
+        <field name="designation">Developer</field>
+        <field name="joining_date">2020-10-23</field>
+        </record>
+
+        <record id="teacher_radhika_arora" model="school.teacher">
+        <field name="name">Radhika Arora</field>
+        <field name="subject_name">C++</field>
+        <field name="fee">20000</field>
+        <field name="designation">Junior Developer</field>
+        <field name="joining_date">2019-10-28</field>
+        </record>
+    </data>
+
+</odoo>

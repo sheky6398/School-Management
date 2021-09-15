@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="student_bharat_yadav" model="school.student">
+            <field name="name">Bharat yadav</field>
+            <field name="roll_no">14526254</field>
+            <field name="date_dob">1997-05-11</field>
+            <field name="phone_no">6398990570</field>
+            <field name="registration_no">151564422</field>
+            <field name="batch">2017-18</field>
+            <field name="father_name">Ajay Kumar Yadav</field>
+            <field name="gender">female</field>
+
+        </record>
+        <record id="student_sagar_yadav" model="school.student">
+            <field name= "name">Sagar Yadav</field>
+            <field name= "roll_no">1584522</field>
+            <field name="date_dob">1995-10-19</field>
+            <field name="phone_no">9990612354</field>
+            <field name="registration_no">168546213</field>
+            <field name="batch">2015-18</field>
+            <field name="father_name">Ajay Yadav</field>
+            <!-- <field name="gender">Male</field> -->
+        </record>
+        <record id="student_nitesh_tyagi" model="school.student">
+            <field name= "name">Nitesh Tyagi</field>
+            <field name= "roll_no">16543213</field>
+            <field name="date_dob">1997-04-24</field>
+            <field name="phone_no">9582055707</field>
+            <field name="registration_no">1654351</field>
+            <field name="batch">2015-19</field>
+            <field name="father_name">Umesh Tyagi</field>
+            <field name="gender">female</field>
+        </record>
+        <record id="student_vishal_tyagi" model="school.student">
+            <field name= "name">Vishal Tyagi</field>
+            <field name= "roll_no">16543213</field>
+            <field name="date_dob">1996-12-29</field>
+            <field name="phone_no">7060420501</field>
+            <field name="registration_no">1654351</field>
+            <field name="batch">2017-19</field>
+            <field name="father_name">Mintoo Tyagi</field>
+            <!-- <field name="gender">Male</field> -->
+        </record>
+        <record id="student__vaishali_yadav" model="school.student">
+            <field name= "name">Vaishali Yadav</field>
+            <field name= "roll_no">16543213</field>
+            <field name="date_dob">1992-03-01</field>
+            <field name="phone_no">9582055707</field>
+            <field name="registration_no">1654351</field>
+            <field name="batch">2012-15</field>
+            <field name="father_name">Ajay Kumar Yadav</field>
+            <!-- <field name="gender">Female</field> -->
+        </record>
+        
+    </data>
+</odoo>

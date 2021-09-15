@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="school_student_view_tree">
+        <field name="name">school.student.view.tree</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <!-- view content: <form>, <tree>, <graph>, ... -->
+            <tree>
+                <field name="name"/>
+                <field name="roll_no"/>
+                <field name="phone_no"/>
+                <field name="state"/> 
+                <field name="date_joining"/>
+
+                <!-- <field name="create_date"/> -->
+                <!-- <field name="_last_update"/> -->
+                <!-- <field name="create_uid"/> -->
+                <!-- <field name="write_date"/> -->
+                
+             
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="school_student_view_form">
+        <field name="name">school.student.view.form</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <!-- view content: <form>, <tree>, <graph>, ... -->
+                <form>
+               
+                <header>
+                    <button string="Draft" type="object" name="check_method" class="btn-primary" states = "enrolled,rejected"/>
+                    <button string="Enrolled" type="object" name="enroll_method" class="btn-light" states = 'rejected,draft'/>
+                    <button string="Rejected" type="object" name="rejected_method" class="btn-light"/>
+                    <button string="Check Button" type="object" name="just_method" class="btn-light"/>
+                    <button string="Pay Fee" type="action" name="%(school_management.action_pay_fee_wizard)d" class="btn-primary"/> 
+                
+
+                    <field name="state" widget="statusbar" statusbar_visible="draft,enrolled"/>
+                </header>
+                
+                <sheet>
+                    <group>
+                        <field name="image"  widget="image" class="oe_avatar" nolabel="1"  />
+                    </group>
+                   
+                    <group>
+                        
+                        <group>
+                            <field name="name"/>
+                            <!-- <field name="teeacher_id" /> -->
+                            <field name="roll_no"/>
+                            <field name="registration_no"/>
+                            <field name="phone_no"/>
+                            <field name="course_ids" widget="many2many_tags"/> 
+                        </group>
+                        <group>
+                                <field name="father_name" groups="school_management.group_school_management_principal"/> 
+                                <field name="batch"/> 
+                            <field name="date_dob"/> 
+                            <field name="gender"/> 
+                            <field name="age"/> 
+                            <field name="email_address"/> 
+                            <field name="fee"/> 
+                            <field name="total_fee"/> 
+                            <field name="date_joining"/>
+                            <field name="choose_state"/>
+                            <field name="due_fee"/>
+                            <field name="amount_paid"/>
+            
+                        </group>
+                    </group>
+                <notebook>
+                    <page string="Teachers">
+                        <field name="teacher_ids"/> 
+                    
+                    </page>
+                </notebook>    
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_school_student">
+        <field name="name">Students</field>
+        <field name="res_model">school.student</field>
+        <field name="view_mode">tree,kanban,form</field>
+    </record>
+    <menuitem id="menu_school" name="School" />
+            
+    <menuitem id="menu_school_student" name="Students" sequence="1"
+    action="action_school_student" parent="school_management.menu_school"/>
+
+</odoo>
