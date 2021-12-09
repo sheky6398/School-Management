@@ -39,7 +39,7 @@ class Student(models.Model):
     date_joining = fields.Datetime(string="Admission Time")
     choose_state = fields.Many2one('res.country.state',string="State")
 
-    # teeacher_id=fields.Many2one('school.teacher', string = "Teacher's Name")
+    teeacher_id=fields.Many2one('school.teacher', string = "Teacher's Name")
     
     
     
@@ -116,7 +116,7 @@ class Student(models.Model):
         else:
             _logger.info(f' \n  "We Have No developer" \n ')
         
-
+    
 
 
 

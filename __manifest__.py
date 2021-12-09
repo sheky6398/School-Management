@@ -4,7 +4,8 @@
     "version":"1.2",
     "summary":"School Data which contain Student name, Courses name and Teacher name",
     "data":[
-        
+        "security/security.xml",
+        "security/ir.model.access.csv",
         "wizard/pay_fee_wizard_views.xml",
         "views/school_student_views.xml",
         "wizard/timing_wizard_views.xml",

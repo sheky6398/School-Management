@@ -44,6 +44,8 @@
                             <field name="student_id"/>
                             <field name="student_batch"/>
                             <field name="courses_count"/>
+                            <field name="student_line_ids"/>
+
 
                         </group>
                         

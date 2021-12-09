@@ -1,5 +1,6 @@
 from odoo import models
-from odoo import fields
+from odoo import fields,api
+
 
 class Course(models.Model):
     _name="school.course"
@@ -16,5 +17,9 @@ class Course(models.Model):
                                  ,string="Course Duration",default="3 months")
     course_fee=fields.Integer(string="Course Fee")
     timing = fields.Selection([('morning','Morning'),('afternoon','Afternoon'),('evening','Evening')], string="Batch Timing", default="morning")
+    
+
+
+    
     
     

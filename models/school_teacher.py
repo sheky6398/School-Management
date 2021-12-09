@@ -14,8 +14,9 @@ class Teacher(models.Model):
     fee=fields.Integer(string="Salary")
     joining_date=fields.Date(string="Joining Date")
     image=fields.Binary(string="Teacher Image")
-    student_id=fields.Many2one('school.student', stirng="Student's id")
+    student_id=fields.Many2one('school.student', string="Student's id")
     student_batch = fields.Char(related='student_id.batch', store=True)
+    student_line_ids = fields.One2many('school.student','teeacher_id',string="STUDENT")
 
     @api.depends('course_ids')
     def compute_count(self):

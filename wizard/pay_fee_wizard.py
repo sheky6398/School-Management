@@ -24,6 +24,9 @@ class PayFee(models.TransientModel):
         result=record.write({'fee':self.fee})
         # _logger.info(f'\n {self.fee} \n')
 
+    
+          
+
 
 
 
